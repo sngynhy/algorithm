@@ -1,4 +1,5 @@
 function solution(number, limit, power) {
+    let answer = 0;
     let divisors = []
     for (let j=1; j<=number; j++) {
         let cnt = 0
@@ -8,11 +9,8 @@ function solution(number, limit, power) {
                 if (i !== Math.sqrt(j)) cnt++
             }
         }
+        answer += cnt > limit ? power : cnt
         divisors.push(cnt)
     }
-    let answer = 0;
-    divisors.forEach(el => {
-        answer += el > limit ? power : el
-    })
     return answer
 }
