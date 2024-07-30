@@ -8,13 +8,7 @@ function solution(keymap, targets) {
         })
     })
     targets.forEach(target => {
-        let sum = 0
-        for (const c of target) {
-            if (!map.has(c)) { sum = -1; break }
-            sum += map.get(c)
-        }
-        answer.push(sum)
-        // answer.push(target.split('').reduce((acc, curr) => map.has(curr) ? acc += map.get(curr) : -1, 0))
+        answer.push(target.split('').reduce((acc, curr) => acc += map.get(curr), 0) || -1)
     })
     return answer;
 }
