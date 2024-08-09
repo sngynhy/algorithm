@@ -7,12 +7,7 @@ function solution(keymap, targets) {
         })
     })
     targets.forEach(el => {
-        let flag = false
-        let res = el.split('').reduce((acc, curr) => {
-            map.has(curr) ? acc += map.get(curr) : flag = true
-            return flag ? -1 : acc
-        }, 0)
-        answer.push(res)
+        answer.push(el.split('').reduce((acc, curr) => acc += map.get(curr), 0) || -1)
     })
     return answer
 }
