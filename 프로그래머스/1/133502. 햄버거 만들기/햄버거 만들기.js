@@ -4,9 +4,9 @@ function solution(ingredient) {
     for (let i=0; i<ingredient.length; i++) {
         stack.push(ingredient[i])
         let len = stack.length
-        if (stack.length > 3 && stack.slice(len-4, len).join('') === '1231') {
-            stack.splice(len-4, len)
-            answer += 1
+        if (stack[len - 1] === 1 && stack[len - 2] === 3 && stack[len - 3] === 2 && stack[len - 4] === 1) {
+            stack.splice(-4)
+            answer++
         }
     }
     return answer;
