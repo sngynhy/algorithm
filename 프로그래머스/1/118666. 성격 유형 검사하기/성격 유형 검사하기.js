@@ -1,7 +1,7 @@
 function solution(survey, choices) {
     var answer = '';
     // 성격 유형
-    let type = [['R', 'T'], ['C', 'F'], ['J', 'M'], ['A', 'N']]
+    let type = ['RT', 'CF', 'JM', 'AN']
     // 성격 유형 점수
     let score = [3, 2, 1, 0, 1, 2, 3]
     let map = new Map()
