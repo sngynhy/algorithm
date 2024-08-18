@@ -1,5 +1,5 @@
 function solution(id_list, report, k) {
-    var answer = Array(id_list.length).fill(0)
+    let answer = Array(id_list.length).fill(0)
     report = [...new Set(report)]
     let res = {}
     report.map(el => {
