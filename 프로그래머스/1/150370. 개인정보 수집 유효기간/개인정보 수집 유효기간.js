@@ -14,8 +14,9 @@ function solution(today, terms, privacies) {
             month -= 12
         }
         
-        let expiresDate = [year, month, date].join('.')
-        if (new Date(today) >= new Date(expiresDate)) answer.push(i+1)
+        if (new Date(today) >= new Date(year + '.' + month + '.' + date)) {
+            answer.push(i+1)
+        }
     })
     return answer;
 }
